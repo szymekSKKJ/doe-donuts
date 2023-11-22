@@ -1,0 +1,77 @@
+button.button,
+button.button.white-pink {
+  background-color: white;
+  color: #f684ab;
+  font-size: 20px;
+  border-radius: 10000px;
+  padding: 8px 16px 8px 16px;
+  cursor: pointer;
+  transition: 250ms;
+  border: solid 3px white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: "Varela Round", sans-serif;
+
+  i {
+    transition: margin-left 250ms;
+  }
+
+  &:hover {
+    background-color: #f684ab;
+    color: white;
+
+    i {
+      margin-left: 10px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: 20px !important;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 20px !important;
+    padding: 6px 12px 6px 12px !important;
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 16px !important;
+    padding: 4px 8px 4px 8px !important;
+    border-width: 2px !important;
+  }
+}
+
+button.button.pink-white {
+  background-color: #f684ab;
+  color: white;
+  border: solid 3px #f684ab;
+
+  &:hover {
+    background-color: white;
+    color: #f684ab;
+  }
+}
+
+button.button.white-orange {
+  background-color: white;
+  color: #e2b208;
+  border: solid 3px white;
+
+  &:hover {
+    background-color: #e2b208;
+    color: white;
+  }
+}
+
+button.button.white-green {
+  background-color: white;
+  color: #76bd51;
+  border: solid 3px white;
+
+  &:hover {
+    background-color: #76bd51;
+    color: white;
+  }
+}

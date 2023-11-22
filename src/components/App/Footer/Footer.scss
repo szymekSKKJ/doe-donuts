@@ -1,0 +1,15 @@
+footer {
+  width: 100%;
+  background-color: white;
+  padding: 8px;
+  position: relative;
+  z-index: 10000000;
+
+  .author {
+    text-align: center;
+    color: #f64f9d;
+    font-weight: 100;
+    font-size: 15px;
+    font-family: "Varela Round", sans-serif;
+  }
+}

@@ -1,0 +1,86 @@
+.gallery {
+  $image-width: 0.7;
+  $flex-gap: 36px;
+
+  --counter: 0;
+  --gallery-width: 800px;
+
+  width: var(--gallery-width);
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  overflow: hidden;
+  position: relative;
+
+  z-index: 1;
+  border-radius: 4px;
+  overflow: hidden;
+
+  @media screen and (max-width: 1024px) {
+    left: 0px;
+    position: absolute;
+  }
+
+  .images {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: $flex-gap;
+    transition: 1000ms;
+    transform: translateX(calc((-1 * var(--gallery-width) * $image-width) - $flex-gap + (var(--gallery-width) - (var(--gallery-width) * $image-width)) / 2));
+    translate: calc(-1 * var(--counter) * (var(--gallery-width) * $image-width + $flex-gap));
+
+    .image {
+      width: $image-width * 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      overflow: hidden;
+      aspect-ratio: 1/1;
+      border-radius: 4px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .buttons {
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    padding: 0px 16px 0px 16px;
+
+    button {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #f684ab;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      transition: 250ms;
+      filter: drop-shadow(0px 0px 3px black);
+
+      &:hover {
+        color: #f3a0bd;
+      }
+
+      i {
+        font-size: 100px;
+      }
+    }
+  }
+}

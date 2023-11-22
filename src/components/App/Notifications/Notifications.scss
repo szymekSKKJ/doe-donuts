@@ -1,0 +1,36 @@
+.notifications {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 100000000000000000000;
+
+  .notification {
+    width: 100vw;
+    height: auto;
+    padding: 8px;
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    color: white;
+    background-color: #f684ab;
+    font-family: "Varela Round", sans-serif;
+    font-size: 18px;
+    animation: apear-notifiaction 4000ms forwards;
+
+    @keyframes apear-notifiaction {
+      0% {
+        transform: translateY(-100%);
+      }
+      10% {
+        transform: translateY(0%);
+      }
+      90% {
+        transform: translateY(0%);
+      }
+      100% {
+        transform: translateY(-100%);
+      }
+    }
+  }
+}
